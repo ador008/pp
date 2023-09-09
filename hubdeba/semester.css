@@ -1,0 +1,307 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; /* Google's default font family */
+  background-color: #f5f5f5; /* Light gray background color */
+}
+
+.top {
+  background-color: #8ba0c3; /* Google's primary color - Blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo img {
+  position: absolute;
+  top: 5%;
+  height: 50x;
+  width: 60px;
+  margin-left: 55px;
+  scale: 1.8;
+  margin-top: 15px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0; /* Remove any bottom margin */
+  padding-bottom: 0; /* Remove any bottom padding */
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #fbbc05; /* Google's accent color - Yellow */
+  text-decoration: underline;
+}
+
+/* Styling for the "Sign in / Sign up" button */
+.sign-in {
+  margin-right: 40px; /* Add a left margin of 40 pixels to move the button */
+}
+.sign-in button {
+  background-color: #82fe8c; /* Google's primary color - Blue */
+  color: #000;
+  padding: 10px 20px; /* Adjust padding for better button size */
+  border: none;
+  border-radius: 25px; /* Increase border-radius for rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Add hover effect */
+.sign-in button:hover {
+  background-color: #6cc9fb; /* Slightly darker blue on hover */
+  transform: translateY(-2px); /* Lift the button slightly on hover */
+}
+
+/* Add focus effect for accessibility */
+.sign-in button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.3); /* Light blue outline when button is focused */
+}
+
+/* account setting */
+
+.account-settings {
+  position: relative;
+  margin: 10px 5%;
+  /* border-radius: 50%; */
+}
+.account-settings .account {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  padding: 5px 7px;
+  border-radius: 50%;
+}
+.account-settings.selected .account {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.user-account-items {
+  display: none;
+  position: absolute; /* Position it relative to the user-account-items */
+  top: calc(
+    100% + 10px
+  ); /* Position it below the user-account-items with a small gap */
+  right: 0;
+  width: max-content;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Ensure it appears above other elements */
+  padding: 10px;
+  transition: all 0.1s ease; /* Add a transition for smooth animation */
+  /* scale: 0;  */
+
+  border-radius: 15px;
+  box-shadow: 0 2px 3px rgba(37, 67, 185, 0.497);
+}
+
+.user-account-items.show {
+  display: block;
+  /* scale: 1;  */
+  transition: all 0.1s ease;
+}
+.user-account-items:hover {
+  box-shadow: 0 2px 5px rgba(37, 67, 185, 0.822);
+}
+.user-account-items .horizontal-line {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.324);
+  width: 110%;
+  margin: 5px 0;
+  margin-left: -5%;
+}
+.user-account-items .acct-name {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #8ba0c3;
+  font-family:'Times New Roman', Times, serif ;
+
+}
+
+.user-account-items .type {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+.user-account-items .type .logo{
+  padding-right: 5px;
+}
+.user-account-items .type:hover{
+  background-color: rgba(202, 220, 250, 0.628);
+}
+.user-account-items .type.logout:hover{
+  background-color: rgba(250, 202, 202, 0.628);
+}
+
+/* acct settt ends */
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #735745;
+  min-width: 160px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.dropdown-content li {
+  padding: 10px;
+  margin: 0;
+}
+
+.dropdown-content li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.dropdown-content li:hover {
+  background-color: goldenrod;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Style the "Others" dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #735745;
+  min-width: 160px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.dropdown-content li {
+  padding: 10px;
+  margin: 0;
+}
+
+.dropdown-content li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.dropdown-content li:hover {
+  background-color: goldenrod;
+}
+
+/* Show the dropdown when hovering over the "Others" option */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hide the dropdown when not hovering over the "Others" option */
+.dropdown:not(:hover) .dropdown-content {
+  display: none;
+}
+
+.bottom {
+  padding: 80px 2;
+  text-align: center;
+}
+
+/* Style the subject-group elements */
+.subject-group {
+  margin-top: 20px;
+  display: none;
+}
+
+.semester-gp {
+  margin: 20px auto;
+  width: 45%;
+}
+
+.semester-link {
+  background-color: #4285f4;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.semester-link:hover {
+  background-color: #3367d6;
+}
+
+.subject-group a {
+  display: block;
+  background-color: #f1f1f1;
+  color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.subject-group a:hover {
+  background-color: #e5e5e5;
+}
+
+/* edit buttons */
+
+.new-question {
+  margin: 2px 10px 0 1%; /* Adjust top margin */
+}
+
+.new-chapter {
+  margin: 2px 10px 0 1%; /* Adjust top margin */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+
+.add {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add:hover {
+  background-color: #2980b9;
+}
+

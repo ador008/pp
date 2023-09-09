@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; /* Google's default font family */
+  background-color: #f5f5f5; /* Light gray background color */
+}
+
+.top {
+  background-color: #8ba0c3; /* Google's primary color - Blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo img {
+  position: absolute;
+  top: 5%;
+  height: 50x;
+  width: 60px;
+  margin-left: 55px;
+  scale: 1.8;
+  margin-top: 15px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #fbbc05; /* Google's accent color - Yellow */
+  text-decoration: underline;
+}
+
+/* Styling for the "Sign in / Sign up" button */
+.sign-in {
+  margin-right: 40px; /* Add a left margin of 40 pixels to move the button */
+}
+.sign-in button {
+  background-color: #82fe8c; /* Google's primary color - Blue */
+  color: #000;
+  padding: 10px 20px; /* Adjust padding for better button size */
+  border: none;
+  border-radius: 25px; /* Increase border-radius for rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Add hover effect */
+.sign-in button:hover {
+  background-color: #6cc9fb; /* Slightly darker blue on hover */
+  transform: translateY(-2px); /* Lift the button slightly on hover */
+}
+
+/* Add focus effect for accessibility */
+.sign-in button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.3); /* Light blue outline when button is focused */
+}
+
+/* account setting */
+
+.account-settings {
+  position: relative;
+  margin: 10px 5%;
+  /* border-radius: 50%; */
+}
+.account-settings .account {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  padding: 5px 7px;
+  border-radius: 50%;
+}
+.account-settings.selected .account {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.user-account-items {
+  display: none;
+  position: absolute; /* Position it relative to the user-account-items */
+  top: calc(
+    100% + 10px
+  ); /* Position it below the user-account-items with a small gap */
+  right: 0;
+  width: max-content;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Ensure it appears above other elements */
+  padding: 10px;
+  transition: all 0.1s ease; /* Add a transition for smooth animation */
+  /* scale: 0;  */
+
+  border-radius: 15px;
+  box-shadow: 0 2px 3px rgba(37, 67, 185, 0.497);
+}
+
+.user-account-items.show {
+  display: block;
+  /* scale: 1;  */
+  transition: all 0.1s ease;
+}
+.user-account-items:hover {
+  box-shadow: 0 2px 5px rgba(37, 67, 185, 0.822);
+}
+.user-account-items .horizontal-line {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.324);
+  width: 110%;
+  margin: 5px 0;
+  margin-left: -5%;
+}
+.user-account-items .acct-name {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #8ba0c3;
+  font-family:'Times New Roman', Times, serif ;
+
+}
+
+.user-account-items .type {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+.user-account-items .type .logo{
+  padding-right: 5px;
+}
+.user-account-items .type:hover{
+  background-color: rgba(202, 220, 250, 0.628);
+}
+.user-account-items .type.logout:hover{
+  background-color: rgba(250, 202, 202, 0.628);
+}
+
+/* acct settt ends */
+
+  
+  .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  /* Styling for each section */
+  .section {
+    width: 30%;
+    margin: 10px;
+  }
+  
+  .section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for video list */
+  .video-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Styling for individual video item */
+  .video-item {
+    width: 45%;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .video-info {
+    padding: 10px;
+  }
+  
+  .video-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .video-channel {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .video-views {
+    font-size: 12px;
+    color: #888;
+  }
+  
